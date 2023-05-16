@@ -41,9 +41,9 @@ function SignUp1() {
     }
 
     
-    useEffect(()=>{
-        inputRef.current.focus()
-    },[])
+    // useEffect(()=>{
+    //     inputRef.current.focus()
+    // },[])
 
   return (
     <div>
