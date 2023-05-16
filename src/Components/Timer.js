@@ -7,7 +7,7 @@ function Timer() {
     }
 
     const startTimer=()=>{
-            timerVar=setInterval(tick,100)
+            timerVar=setInterval(tick,1000)
     }
     const stopTimer=()=>{
             clearInterval(timerVar)
@@ -17,11 +17,13 @@ function Timer() {
             setCount(0)
     }
   return (
-    <div>{count}
+        <center>
+    <div><b>{count}</b><br/>
         <button onClick={()=>startTimer('start')}>start</button>
         <button onClick={()=>stopTimer('stop')}>stop</button>
         <button onClick={()=>reset('reset')}>reset</button>
     </div>
+    </center>
   )
 }
 
