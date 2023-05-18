@@ -14,7 +14,7 @@ function Timer() {
     const start=()=>{
             setSta(true)
             setPau(false)       
-            timerRef.current=setInterval(tick,100)
+            timerRef.current=setInterval(tick,1000)
             console.log('timer started')
     }
     const pause=()=>{
@@ -25,7 +25,7 @@ function Timer() {
             console.log('timer paused')
     }
     const resume=()=>{
-            timerRef.current=setInterval(tick,100)
+            timerRef.current=setInterval(tick,1000)
             console.log('timer resumed')
             setRes(true)
             setRest(true)
@@ -51,7 +51,7 @@ function Timer() {
         <button onClick={()=>pause()} disabled={pau}>pause</button>
         <button onClick={()=>resume()} disabled={res}>resume</button>
         <button onClick={()=>reset()} disabled={rest}>reset</button><br/>
-        {/* <i>Click start to start</i> */}
+        <i>Click start to start</i>
     </div>
     </center>
   )
