@@ -65,6 +65,9 @@ import DataFetching2 from './Components/DataFetching2';
 import CountUseMemo from './Components/CountUseMemo';
 import Column from './Components/Column';
 import Timer from './Components/Timer';
+import TimerRef from './Components/TimerRef';
+import TimerFront from './Components/TimerFront';
+
 function App() {
   return (
     <div className="sst" id="we">
@@ -80,6 +83,12 @@ function App() {
           <Route path='/privacypolicy' exact element={<PrivacyPolicy/>}/>
         </Routes>
       </BrowserRouter>  */}
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' exact element={<TimerFront/>} />
+          <Route path='/timer' exact element={<Timer/>}/>
+        </Routes>
+      </BrowserRouter>
       {/* <CountUseMemo/> */}
       {/* <DataFetching1/>
       <DataFetching2/> */}
@@ -109,7 +118,9 @@ function App() {
       {/* <MouseListnerUseEffect/> */}
       {/* <CleanUpCode/> */}
       {/* <TimerHook/> */}
-      <Timer/>
+      {/* <Timer/>  */}
+      {/* <TimerFront/> */}
+      {/* <TimerRef/> */}
       {/* <MouseListenerClass/> */}
       {/* <ListHooks/> */}
       {/* <HookState/> */}
