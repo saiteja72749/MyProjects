@@ -1,9 +1,9 @@
 button {
     margin: 5px;
-    padding: 7px 40px;
+    padding: 5px 25px;
     border: 1px solid #480774;
     border-radius: 8px;
-    font-size: 14px;
+    font-size: 15px;
     text-transform: capitalize;
     background-color: rgb(35, 167, 62);
     color: #ffffff;   
