@@ -57,7 +57,7 @@ function MessagePro() {
                             {/* </label> */}
                         </div>
                     )}
-                  <button><a style={{color: 'white'}} href={`https://api.whatsapp.com/send?phone=918520953164 &text= Hi there! ${First} ${Second} consulting you for ${Message}`}>Consult</a></button>
+                  <button><a href={`https://api.whatsapp.com/send?phone=918520953164 &text= Hi there! ${First} ${Second} consulting you for ${Message}`}>Consult</a></button>
                 </div>
             </center>
         </form>
