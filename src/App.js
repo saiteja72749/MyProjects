@@ -97,8 +97,10 @@ import UseMemoPrac from './Components/UseMemoPrac';
 import { ParentContext } from './Components/Context/ParentContext';
 import ContextFunc1 from './Components/ContextFunc1';
 import { ChildContext } from './Components/Context/ChildContext';
-import TimerPro from './Components/Projects.js/TimerPro';
-import MessagePro from './Components/Projects.js/MessagePro';
+import TimerPro from './Components/Projects.js/StopWatch';
+import MessagePro from './Components/Projects.js/WhatsappMsg';
+import Location from './Components/Projects.js/Location';
+
 export const UserContext = React.createContext()
 export const MyContext = React.createContext()
 // const TD = ()=> HigherComp2(TodoList)
@@ -175,6 +177,7 @@ function App() {
       {/* <Timer/>  */}
       {/* <TimerPro/> */}
       <MessagePro/>
+      <Location/>
       {/* <TimerFront/> */}
       {/* <TimerRef/> */}
       {/* <CountHoc name='sst'/>
