@@ -13,7 +13,7 @@ export default function CountUseMemo() {
 
     const isEven=(useMemo(()=>{
         let i=0
-    while(i<2000000000) i++
+    while(i<100000000) i++
         return state%2===0
     },[state]))
     
@@ -26,6 +26,7 @@ export default function CountUseMemo() {
         <span>{isEven?'even':'odd'}</span><br/>
         <button type='button' onClick={Increment2}>Increment2 {initialState}</button>
         {/* <span>{isOdd()? 'odd':'even'}</span> */}
+    
     </div>
   )
 }

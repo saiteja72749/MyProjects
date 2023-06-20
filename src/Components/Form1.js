@@ -8,7 +8,7 @@ function Form1() {
     const [confirmPassword,setConfirmPassword]=useState('')
     const [input1,setInput1]=useState('password')
     const [auth,setAuth]=useState(false)
-    const navigate=useNavigate()
+    // const navigate=useNavigate()
     const inputRef=useRef(null)
     const HandleEvent=event=>{
           if(password!==confirmPassword){

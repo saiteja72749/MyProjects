@@ -6,7 +6,7 @@ button {
     font-size: 17px;
     text-transform: capitalize;
     background-color: rgb(120 210 255);
-    color: #c54141;
+    color: #2eb125;
     
 }
 button:disabled{
@@ -21,14 +21,7 @@ button:disabled{
     color: rgb(69, 210, 100);
     font-style:unset;
 }
-/* .start {
-    background-color: rgb(142, 180, 142);
-    color: white
-} */
 
-/* .start:disabled {
-    background-color: grey;
-} */
 .whole {
     background-color:#fff3f0
 }
@@ -51,4 +44,38 @@ button:disabled{
 .number{
     font-size: 100px;
     padding: 15px;
+}
+
+.Todo{
+    margin: 4px;
+    padding: 10px 25px;
+    border: 2px solid rgb(152, 155, 235);
+    border-radius: 20px;
+    font-size: 15px;
+    font-style: italic;
+    color: rgb(110, 26, 26);
+}
+
+.TodoBut{
+    margin: 4px;
+    padding: 10px 25px;
+    border: 1px solid rgb(93, 95, 163);
+    border-radius: 50px;
+    text-transform: capitalize;
+    font-size: 15px;
+    font-style: italic;
+    color: rgb(0, 0, 0);
+    background-color: rgb(70, 220, 90);
+}
+
+.delete{
+    margin: 2px;
+    padding: 8px 10px;
+    border: 1px solid rgb(93, 95, 163);
+    border-radius: 8px;
+    text-transform: capitalize;
+    font-size: 15px;
+    font-style: italic;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 0, 0);
 }

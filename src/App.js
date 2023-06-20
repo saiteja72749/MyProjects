@@ -1,4 +1,5 @@
 // import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
 import Hello from './Components/Funcprops';
 import Bye from './Components/CLassprops';
@@ -13,7 +14,6 @@ import Parent from './Components/Parent';
 import Me from './Components/Me';
 import ConditionalRend from './Components/ConditionalRend';
 import NameList from './Components/NameList';
-import StyleSheet from './Components/StyleSheet';
 import InLine from './Components/InLine';
 import './appStyles.css';
 import styles from './appStyles.module.css';
@@ -49,7 +49,7 @@ import Gmail from './Components/Gmail';
 import GetReqClass from './Components/GetReqClass';
 import PostReqClass from './Components/PostReqClass';
 import Navbar from './Components/Navbar';
-import { BrowserRouter,Route,Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Home } from './Components/Home';
 import { About } from './Components/About';
 import { Contact } from './Components/Contact';
@@ -67,7 +67,41 @@ import Column from './Components/Column';
 import Timer from './Components/Timer';
 import TimerRef from './Components/TimerRef';
 import TimerFront from './Components/TimerFront';
-
+import TodoList from './Components/TodoList';
+import HigherComp, { HigherComp2 } from './Components/Hoc';
+import DocTitle1 from './Components/DocTitle1';
+import DocTitle2 from './Components/DocTitle2';
+import CountUseHook1 from './Components/CountUseHook1';
+import CountUseHook2 from './Components/CountUseHook2';
+import FormUseInput from './Components/FormUseInput';
+import { RenderUseState } from './Components/RenderUseState';
+import { RenderUseReducer } from './Components/RenderUseReducer';
+import { StateImmutable } from './Components/StateImmutable';
+import { StateImmutableArray } from './Components/StateImmutableArray';
+import { ParentRender } from './Components/ParentRender';
+import { ParentRender1 } from './Components/ParentRender1';
+import { ChildRender1 } from './Components/ChildRender1';
+import { ParentRender2 } from './Components/ParentRender2';
+import UseMemoHook from './Components/UseMemoHook';
+import { ParentMemo } from './Components/ParentMemo';
+import CountHoc from './Components/CountHoc';
+import HoverCounter from './Components/HoverCounter';
+import CountHoc2 from './Components/CountHoc2';
+import HoverCounter2 from './Components/HoverCounter2';
+import RenderProps from './Components/RenderProps';
+import RenderPropsCounter from './Components/RenderPropsCounter';
+import ContextC from './Components/ContextC';
+import { UserProvider } from './Components/UserContext';
+import MemoPrac from './Components/MemoPrac';
+import UseMemoPrac from './Components/UseMemoPrac';
+import { ParentContext } from './Components/Context/ParentContext';
+import ContextFunc1 from './Components/ContextFunc1';
+import { ChildContext } from './Components/Context/ChildContext';
+import TimerPro from './Components/Projects.js/TimerPro';
+import MessagePro from './Components/Projects.js/MessagePro';
+export const UserContext = React.createContext()
+export const MyContext = React.createContext()
+// const TD = ()=> HigherComp2(TodoList)
 function App() {
   return (
     <div className="sst" id="we">
@@ -83,12 +117,32 @@ function App() {
           <Route path='/privacypolicy' exact element={<PrivacyPolicy/>}/>
         </Routes>
       </BrowserRouter>  */}
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <Routes>
           <Route path='/' exact element={<TimerFront/>} />
           <Route path='/timer' exact element={<Timer/>}/>
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
+      {/* <TodoList/> */}
+      {/* <UseMemoHook/> */}
+      {/* <ParentMemo/> */}
+      {/* <DocTitle1/>
+      <DocTitle2/>  */}
+      {/* <CountUseHook1/>
+      <CountUseHook2/> */}
+      {/* <FormUseInput/> */}
+      {/* <TD /> */}
+      {/* <RenderUseState/> */}
+      {/* <RenderUseReducer/> */}
+      {/* <ParentRender1>
+        <ChildRender1/>
+      </ParentRender1> */}
+      {/* <ParentRender2/> */}
+      {/* <StateImmutable/> */}
+      {/* <StateImmutableArray/> */}
+      {/* <ParentRender/> */}
+      {/* <HigherComp2><TodoList /></HigherComp2> */}
+      {/* <HigherComp><TodoList /></HigherComp> */}
       {/* <CountUseMemo/> */}
       {/* <DataFetching1/>
       <DataFetching2/> */}
@@ -119,8 +173,25 @@ function App() {
       {/* <CleanUpCode/> */}
       {/* <TimerHook/> */}
       {/* <Timer/>  */}
+      {/* <TimerPro/> */}
+      <MessagePro/>
       {/* <TimerFront/> */}
       {/* <TimerRef/> */}
+      {/* <CountHoc name='sst'/>
+      <HoverCounter/> */}
+      {/* <CountHoc2/>
+      <HoverCounter2/> */}
+      {/* <RenderProps render={(isLoggedIn)=>isLoggedIn ? 'sai' : 'teja'}/> */}
+      {/* <RenderPropsCounter>{(count,increment)=> <CountHoc2 count={count} increment={increment}/>}</RenderPropsCounter>
+      <RenderPropsCounter>{(count,increment)=> <HoverCounter2 count={count} increment={increment}/>}</RenderPropsCounter> */}
+      {/* <UserProvider value='chintu'>
+      <ContextC/>
+      </UserProvider> */}
+      {/* <UserContext.Provider value={'sai teja'}>
+        <MyContext.Provider value={'72749'}>
+            <ContextFunc1/>
+        </MyContext.Provider>
+      </UserContext.Provider> */}
       {/* <MouseListenerClass/> */}
       {/* <ListHooks/> */}
       {/* <HookState/> */}
@@ -170,9 +241,14 @@ function App() {
       <FunctionCLick/> */}
       {/* <Column/> */}
       {/* <CountUseMemo/> */}
+      {/* <MemoPrac/>
+      <UseMemoPrac/> */}
+      {/* <ParentContext>
+        <ChildContext/>
+      </ParentContext> */}
     </div>
   );
 }
 
 export default App;
-   
+

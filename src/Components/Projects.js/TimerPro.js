@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 // style={{border: '2px solid', margin:'20px auto', width: '600px'}}
-import './timer.css'
+// import './timer.css'
 function Timer() {
         const [count, setCount] = useState(0)
         const [sta, setSta] = useState(false)
