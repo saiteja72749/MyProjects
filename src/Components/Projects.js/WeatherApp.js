@@ -12,7 +12,7 @@ function WeatherApp() {
     ).then(data => {
       const kelvin = data.main.temp
       const celsius = kelvin - 273.15
-      setResult(`Temperature at ${city} is ${Math.round(celsius)}`)   
+      setResult(`Temperature at ${city} is ${Math.round(celsius)} Degrees`)   
       setCity('') 
     }).catch(
       error=>{
