@@ -9,10 +9,10 @@ function MessagePro() {
 
     const MessageProRef=useRef(null)
 
-    function submit (e) {
-        alert(`Hi there! ${First} ${Second} want to meet you for ${Message}`)
-        e.preventDefault()
-    }
+    // function submit (e) {
+    //     alert(`Hi there! ${First} ${Second} want to meet you for ${Message}`)
+    //     e.preventDefault()
+    // }
     // url=`https://api.whatsapp.com/send?phone=8520953164 &text=${Message}`;
     useEffect(()=>{
         MessageProRef.current.focus()

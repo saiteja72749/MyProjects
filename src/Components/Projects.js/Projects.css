@@ -38,3 +38,16 @@ input {
   box-shadow: 0px 0px 10px #a6652c;
 }
 
+.weather {
+    text-align: center;
+    width: 70%;
+    margin: 10px auto;
+    background: whitesmoke;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px #3bb7dc;
+}
+
+.text {
+    font: 30px solid blue;
+}

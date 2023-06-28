@@ -100,6 +100,10 @@ import { ChildContext } from './Components/Context/ChildContext';
 import TimerPro from './Components/Projects.js/StopWatch';
 import MessagePro from './Components/Projects.js/WhatsappMsg';
 import Location from './Components/Projects.js/Location';
+import GoogleMap from './Components/Projects.js/GoogleMap';
+import WeatherApp from './Components/Projects.js/WeatherApp';
+// import FormikPrac from './Components/FormikPrac';
+
 
 export const UserContext = React.createContext()
 export const MyContext = React.createContext()
@@ -134,6 +138,7 @@ function App() {
       <CountUseHook2/> */}
       {/* <FormUseInput/> */}
       {/* <TD /> */}
+      {/* <FormikPrac/> */}
       {/* <RenderUseState/> */}
       {/* <RenderUseReducer/> */}
       {/* <ParentRender1>
@@ -176,8 +181,11 @@ function App() {
       {/* <TimerHook/> */}
       {/* <Timer/>  */}
       {/* <TimerPro/> */}
-      <MessagePro/>
-      <Location/>
+      {/* <MessagePro/> */}
+      {/* <GoogleMap/> */}
+      {/* <Location/> */}
+      <WeatherApp/>
+
       {/* <TimerFront/> */}
       {/* <TimerRef/> */}
       {/* <CountHoc name='sst'/>
