@@ -12,7 +12,7 @@ function WeatherApp() {
     ).then(data => {
       const kelvin = data.main.temp
       const celsius = kelvin - 273.15
-      setResult(`Temperature at ${city} is ${Math.round(celsius)} Degrees`)   
+      setResult(`Temperature at ${city} is ${Math.round(celsius)}°C`)   
       setCity('') 
     }).catch(
       error=>{
@@ -25,10 +25,12 @@ function WeatherApp() {
     <div>    
       <center>
          <form onSubmit={submitHandler} className='weather'>
-          <h2 className='text'>WeatherApp</h2>
+            <h2 className='text'>WeatherApp</h2>
+            <label>Enter the city:</label>
             <input type='text' name='city' value={city} onChange={e=>setCity(e.target.value)}/><br/>
             <b>{result}</b><br/>
-            <button type='submit'>submit</button>
+            <button type='submit'>submit</button><br/>
+            <u><i><b>Note:</b></i></u><> Only towns and cities temperatures can be shown here.</>
          </form>
          
       </center>
