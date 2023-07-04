@@ -1,0 +1,19 @@
+nav {
+  text-decoration: none;
+  font-weight: bold;
+  background-color:aliceblue;
+  padding: 16px 32px;
+}
+
+nav a {
+  margin-right: 16px;
+}
+
+nav a.active{
+  text-decoration: none;
+  font-weight: bold;
+}
+.primary {
+  background-color:rgb(222, 235, 171);
+  padding: 16px 32px;
+}

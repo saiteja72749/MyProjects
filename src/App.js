@@ -49,11 +49,6 @@ import Gmail from './Components/Gmail';
 import GetReqClass from './Components/GetReqClass';
 import PostReqClass from './Components/PostReqClass';
 import Navbar from './Components/Navbar';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { Home } from './Components/Home';
-import { About } from './Components/About';
-import { Contact } from './Components/Contact';
-import { Login } from './Components/Login';
 import Form1 from './Components/Form1';
 import SignUp1 from './Components/SignUp1';
 import PrivacyPolicy from './Components/PrivacyPolicy';
@@ -102,7 +97,27 @@ import MessagePro from './Components/Projects.js/WhatsappMsg';
 import Location from './Components/Projects.js/Location';
 import GoogleMap from './Components/Projects.js/GoogleMap';
 import WeatherApp from './Components/Projects.js/WeatherApp';
-// import FormikPrac from './Components/FormikPrac';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import { Home } from './Components/Routers.js/Home';
+// import { About } from './Components/Routers.js/About';
+
+import { Navbar1 } from './Components/Routers.js/Navbar1';
+import { OrderSummary } from './Components/Routers.js/OrderSummary';
+import { NoMatch } from './Components/Routers.js/NoMatch';
+import { Products } from './Components/Routers.js/Products';
+import { Featured } from './Components/Routers.js/Featured';
+import { New } from './Components/Routers.js/New';
+import { Users } from './Components/Routers.js/Users';
+import { UserDetails } from './Components/Routers.js/UserDetails';
+import { Admin } from './Components/Routers.js/Admin';
+import { Profile } from './Components/Routers.js/Profile';
+import { AuthProvider } from './Components/Routers.js/Auth';
+import { LoginRoute } from './Components/Routers.js/LoginRoute';
+import { RequireAuth } from './Components/Routers.js/RequireAuth';
+import { GoogleMaps } from './Components/Projects.js/GoogleMaps';
+// import { IconsReact } from './Components/Practicalreact/IconsReact';
+// import { Icon1 } from "react-icons/gi";
+const LazyAbout = React.lazy(()=>import ('./Components/Routers.js/About'))
 
 
 export const UserContext = React.createContext()
@@ -111,13 +126,11 @@ export const MyContext = React.createContext()
 function App() {
   return (
     <div className="sst" id="we">
+      <GoogleMaps/>
+      {/* <IconsReact/> */}
+      {/* <Icon1/> */}
       {/* <BrowserRouter>
-        <Navbar/>
         <Routes>
-          <Route path='/' exact element={<Home/>}/>
-          <Route path='/about' exact element={<About/>}/>
-          <Route path='/contact/' exact element={<Contact/>}/>
-          <Route path='/login' exact element={<Login/>}/>
           <Route path='/login1' exact element={<Form1/>}/>
           <Route path='/signup1' exact element={<SignUp1/>}/> 
           <Route path='/privacypolicy' exact element={<PrivacyPolicy/>}/>
@@ -129,6 +142,31 @@ function App() {
           <Route path='/timer' exact element={<Timer/>}/>
         </Routes>
       </BrowserRouter> */}
+
+{/*       
+      <>
+        <AuthProvider>
+          <Navbar1/>
+          <Routes>
+            <Route path='/' exact element={<Home/>}/>
+            <Route path='about' exact element={<React.Suspense fallback='Loading...'><LazyAbout/></React.Suspense>}/>
+            <Route path='orderSuccessful' exact element={<OrderSummary/>}/>
+            <Route path='products' exact element={<Products/>}>
+              <Route index element={<New/>}/>
+              <Route path='featured' exact element={<Featured/>}/>
+              <Route path='new' exact element={<New/>}/>
+            </Route>
+            <Route path='users' element={<Users/>}>
+              <Route path=':userId' element={<UserDetails/>}/>
+              <Route path='admin' element={<Admin/>}/>
+            </Route>
+            <Route path='profile' element={<RequireAuth><Profile/></RequireAuth>}/>
+            <Route path='login' element={<LoginRoute/>}/>
+            <Route path='*' exact element={<NoMatch/>}/>
+          </Routes>
+        </AuthProvider>
+      </> */}
+
       {/* <TodoList/> */}
       {/* <UseMemoHook/> */}
       {/* <ParentMemo/> */}
@@ -184,7 +222,7 @@ function App() {
       {/* <MessagePro/> */}
       {/* <GoogleMap/> */}
       {/* <Location/> */}
-      <WeatherApp/>
+      {/* <WeatherApp/> */}
 
       {/* <TimerFront/> */}
       {/* <TimerRef/> */}
