@@ -126,7 +126,7 @@ export const MyContext = React.createContext()
 function App() {
   return (
     <div className="sst" id="we">
-      <GoogleMaps/>
+      {/* <GoogleMaps/> */}
       {/* <IconsReact/> */}
       {/* <Icon1/> */}
       {/* <BrowserRouter>
@@ -143,7 +143,7 @@ function App() {
         </Routes>
       </BrowserRouter> */}
 
-{/*       
+      
       <>
         <AuthProvider>
           <Navbar1/>
@@ -165,7 +165,7 @@ function App() {
             <Route path='*' exact element={<NoMatch/>}/>
           </Routes>
         </AuthProvider>
-      </> */}
+      </>
 
       {/* <TodoList/> */}
       {/* <UseMemoHook/> */}
