@@ -22,7 +22,7 @@ export const ChildContext1 = () => {
     </div>
   )
 }
-// export const MemoizedChildContext1=React.memo(ChildContext1)
+export const MemoizedChildContext1=React.memo(ChildContext1)
 
 export const ChildContext2 = () => {
   const count = useContext(CountContext)

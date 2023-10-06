@@ -97,7 +97,9 @@ import MessagePro from './Components/Projects.js/WhatsappMsg';
 import Location from './Components/Projects.js/Location';
 import GoogleMap from './Components/Projects.js/GoogleMap';
 import WeatherApp from './Components/Projects.js/WeatherApp';
-import { Routes, Route, BrowserRouter } from 'react-router-dom';
+
+import { Routes, Route, BrowserRouter, Link } from 'react-router-dom';
+
 import { Home } from './Components/Routers.js/Home';
 // import { About } from './Components/Routers.js/About';
 
@@ -115,6 +117,8 @@ import { AuthProvider } from './Components/Routers.js/Auth';
 import { LoginRoute } from './Components/Routers.js/LoginRoute';
 import { RequireAuth } from './Components/Routers.js/RequireAuth';
 import { GoogleMaps } from './Components/Projects.js/GoogleMaps';
+import SecurityPasscode from './Components/Projects.js/SecurityPasscode';
+import Treasure from './Components/Projects.js/Securitypasscode1';
 // import { IconsReact } from './Components/Practicalreact/IconsReact';
 // import { Icon1 } from "react-icons/gi";
 const LazyAbout = React.lazy(()=>import ('./Components/Routers.js/About'))
@@ -123,12 +127,14 @@ const LazyAbout = React.lazy(()=>import ('./Components/Routers.js/About'))
 export const UserContext = React.createContext()
 export const MyContext = React.createContext()
 // const TD = ()=> HigherComp2(TodoList)
+
 function App() {
   return (
     <div className="sst" id="we">
       {/* <GoogleMaps/> */}
       {/* <IconsReact/> */}
       {/* <Icon1/> */}
+
       {/* <BrowserRouter>
         <Routes>
           <Route path='/login1' exact element={<Form1/>}/>
@@ -142,9 +148,30 @@ function App() {
           <Route path='/timer' exact element={<Timer/>}/>
         </Routes>
       </BrowserRouter> */}
+    {/* <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<SecurityPasscode />} />
+          <Route path='/Treasure' element={<Treasure />} />
+        </Routes>
+      </BrowserRouter> */}
 
+      {/* <nav>
+        <ul>
+          <li>
+            <Link to="/">Security Passcode</Link>
+          </li>
+          <li>
+            <Link to="/Treasure">Treasure</Link>
+          </li>
+        </ul>
+      </nav> */}
+
+      <Routes>
+        <Route path="/" element={<SecurityPasscode />} />
+        <Route path="/Treasure" element={<Treasure />} />
+      </Routes>
       
-      <>
+      {/* <>
         <AuthProvider>
           <Navbar1/>
           <Routes>
@@ -165,7 +192,9 @@ function App() {
             <Route path='*' exact element={<NoMatch/>}/>
           </Routes>
         </AuthProvider>
-      </>
+      </> */}
+      
+      {/* <SecurityPasscode/> */}
 
       {/* <TodoList/> */}
       {/* <UseMemoHook/> */}
