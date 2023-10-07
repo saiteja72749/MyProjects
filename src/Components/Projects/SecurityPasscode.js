@@ -8,7 +8,6 @@ function SecurityPasscode() {
   const [passwordCorrect, setpasswordCorrect] = useState(true);
 
   const inputRef = useRef(null);
-  const navigate = useNavigate();
 
   const Focus = () => {
     inputRef.current.focus();
@@ -29,15 +28,13 @@ function SecurityPasscode() {
   const handleInputChange = (event) => {
     setInput(event.target.value);
     setValue(event.target.value);
+    setAuth(true);
   };
 
   const handleClick = (e) => {
     e.preventDefault();
     if (value === '72749') {
       setpasswordCorrect(true);
-      setAuth(true);
-      // You can navigate to another route when authentication is successful
-      navigate('/Treasure');
     } else if (value === '') {
       setpasswordCorrect(false);
       alert('Please enter the passcode');
@@ -45,7 +42,11 @@ function SecurityPasscode() {
       setpasswordCorrect(false);
       setValue('');
     }
-  };
+  }
+  const navigate = useNavigate();
+  if(auth){
+    return <navigate to='/Treasure'/>
+  }
 
   return (
     <div>
