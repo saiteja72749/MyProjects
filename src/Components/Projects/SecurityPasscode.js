@@ -57,6 +57,7 @@ function SecurityPasscode() {
             onChange={handleInputChange}
             placeholder='Enter the Passcode'
             ref={inputRef}
+            className='inputfield'
           />
           <button type='button' onClick={showHide}>
             {input === 'password' ? 'Show' : 'Hide'}

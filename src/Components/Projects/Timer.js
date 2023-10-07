@@ -1,6 +1,8 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 // style={{border: '2px solid', margin:'20px auto', width: '600px'}}
-import './timer.css'
+// import './timer.css'
+
+let timerVar=null
 function Timer() {
         const [count, setCount] = useState(0)
         const [sta, setSta] = useState(false)
@@ -11,6 +13,7 @@ function Timer() {
         function tick() {
                 setCount(prevCount => prevCount + 1)
         }
+
 
         const start = () => {
                 setSta(true)
@@ -59,4 +62,4 @@ function Timer() {
         )
 }
 
-export default React.memo(Timer)
+export default Timer;

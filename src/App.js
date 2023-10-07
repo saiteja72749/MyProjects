@@ -41,11 +41,11 @@ import MouseListener, { MouseListenerClass } from './Components/MouseListenerCla
 import MouseListnerUseEffect from './Components/MouseListnerUseEffect';
 import CleanUpCode from './Components/CleanUpCode';
 import TimerHook from './Components/TimerHook';
-import Calculator from './Components/Calculator';
+import Calculator from './Components/Projects/Calculator';
 import DataFetchingPosts from './Components/DataFetchingPosts';
 import DataFetchingAlbums from './Components/DataFetchingAlbums';
 import DataFetchingIndi from './Components/DataFetchingIndi';
-import Gmail from './Components/Gmail';
+import Gmail from './Components/Projects/Gmail';
 import GetReqClass from './Components/GetReqClass';
 import PostReqClass from './Components/PostReqClass';
 import Navbar from './Components/Navbar';
@@ -59,7 +59,7 @@ import DataFetching1 from './Components/DataFetching1';
 import DataFetching2 from './Components/DataFetching2';
 import CountUseMemo from './Components/CountUseMemo';
 import Column from './Components/Column';
-import Timer from './Components/Timer';
+import Timer from './Components/Projects/Timer';
 import TimerRef from './Components/TimerRef';
 import TimerFront from './Components/TimerFront';
 import TodoList from './Components/TodoList';
@@ -92,14 +92,12 @@ import UseMemoPrac from './Components/UseMemoPrac';
 import { ParentContext } from './Components/Context/ParentContext';
 import ContextFunc1 from './Components/ContextFunc1';
 import { ChildContext } from './Components/Context/ChildContext';
-import TimerPro from './Components/Projects.js/StopWatch';
-import MessagePro from './Components/Projects.js/WhatsappMsg';
-import Location from './Components/Projects.js/Location';
-import GoogleMap from './Components/Projects.js/GoogleMap';
-import WeatherApp from './Components/Projects.js/WeatherApp';
-
-import { Routes, Route, BrowserRouter, Link } from 'react-router-dom';
-
+import TimerPro from './Components/Projects/StopWatch';
+import MessagePro from './Components/Projects/WhatsappMsg';
+import Location from './Components/Projects/Location';
+import GoogleMap from './Components/Projects/GoogleMap';
+import WeatherApp from './Components/Projects/WeatherApp';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import { Home } from './Components/Routers.js/Home';
 // import { About } from './Components/Routers.js/About';
 
@@ -116,9 +114,9 @@ import { Profile } from './Components/Routers.js/Profile';
 import { AuthProvider } from './Components/Routers.js/Auth';
 import { LoginRoute } from './Components/Routers.js/LoginRoute';
 import { RequireAuth } from './Components/Routers.js/RequireAuth';
-import { GoogleMaps } from './Components/Projects.js/GoogleMaps';
-import SecurityPasscode from './Components/Projects.js/SecurityPasscode';
-import Treasure from './Components/Projects.js/Securitypasscode1';
+import { GoogleMaps } from './Components/Projects/GoogleMaps';
+import SecurityPasscode from './Components/Projects/SecurityPasscode';
+import Treasure from './Components/Projects/SecurityPasscode1';
 // import { IconsReact } from './Components/Practicalreact/IconsReact';
 // import { Icon1 } from "react-icons/gi";
 const LazyAbout = React.lazy(()=>import ('./Components/Routers.js/About'))
@@ -148,28 +146,15 @@ function App() {
           <Route path='/timer' exact element={<Timer/>}/>
         </Routes>
       </BrowserRouter> */}
-    {/* <BrowserRouter>
+
+    {/* <BrowserRouter> */}
         <Routes>
           <Route path='/' element={<SecurityPasscode />} />
           <Route path='/Treasure' element={<Treasure />} />
         </Routes>
-      </BrowserRouter> */}
+      {/* </BrowserRouter> */}
 
-      {/* <nav>
-        <ul>
-          <li>
-            <Link to="/">Security Passcode</Link>
-          </li>
-          <li>
-            <Link to="/Treasure">Treasure</Link>
-          </li>
-        </ul>
-      </nav> */}
-
-      <Routes>
-        <Route path="/" element={<SecurityPasscode />} />
-        <Route path="/Treasure" element={<Treasure />} />
-      </Routes>
+      {/* <Timer/> */}
       
       {/* <>
         <AuthProvider>
@@ -329,4 +314,3 @@ function App() {
 }
 
 export default App;
-
