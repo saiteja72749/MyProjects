@@ -90,7 +90,7 @@ function SecurityPasscode() {
           <button type='button' onClick={() => setValue(value + '0')}>0</button>
           <button type='submit' onClick={handleClick} className='Enter'>Enter</button>
           <br />
-          <></>
+          
           <button type='button' onClick={() => setValue('')} className='Clear'>Clear</button>
         </form>
       </center>
