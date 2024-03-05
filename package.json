@@ -1,0 +1,22 @@
+{
+  "name": "cli_creation",
+  "version": "1.0.0",
+  "description": "about me and about you",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node Require.js",
+    "end":"node This.js"
+  },
+  "bin":{
+    "cli_creation":"index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "depend": "^0.0.1",
+    "starts": "^0.8.0",
+    "upper-case": "^3.0.0"
+  },
+  "keywords": []
+}

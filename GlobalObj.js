@@ -1,0 +1,6 @@
+const sum = require('./Add')
+console.log(__dirname)
+// var reqfunct = require('./Require')
+console.log(sum(2,4))
+console.log(sum(2,5))
+console.log(__filename)

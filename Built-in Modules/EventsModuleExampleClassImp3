@@ -1,0 +1,8 @@
+class Wine{
+  Alcohol(size){
+    if(size==='high content'){
+      console.log('Serve Wine');
+    }
+  }
+}
+module.exports=Wine;
